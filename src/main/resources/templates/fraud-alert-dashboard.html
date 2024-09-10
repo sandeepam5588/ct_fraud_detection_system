@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fraud Alert Dashboard</title>
+</head>
+<body>
+<h1>Fraud Alert Dashboard</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Claim ID</th>
+        <th>Provider ID</th>
+        <th>Alert Level</th>
+        <th>Alert Reason</th>
+        <th>Action Taken</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="alert : ${fraudAlerts}">
+        <td th:text="${alert.claimId}"></td>
+        <td th:text="${alert.providerId}"></td>
+        <td th:text="${alert.alertLevel}"></td>
+        <td th:text="${alert.alertReason}"></td>
+        <td th:text="${alert.alertActionTaken}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

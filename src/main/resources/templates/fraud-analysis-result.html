@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Fraud Analysis Result</title>
+</head>
+<body>
+<h1>Fraud Analysis Result</h1>
+<p>Claim ID: <span th:text="${fraudAlert.claimId}"></span></p>
+<p>Provider ID: <span th:text="${fraudAlert.providerId}"></span></p>
+<p>Alert Level: <span th:text="${fraudAlert.alertLevel}"></span></p>
+<p>Alert Reason: <span th:text="${fraudAlert.alertReason}"></span></p>
+<p>Action Taken: <span th:text="${fraudAlert.alertActionTaken}"></span></p>
+</body>
+</html>
